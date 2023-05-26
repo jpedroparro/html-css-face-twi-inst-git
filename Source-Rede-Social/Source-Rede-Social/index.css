@@ -1,0 +1,119 @@
+/* Reset de estilos para remover margens e preenchimento padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f2f2; /* Fundo mais clarinho */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+.icon {
+    display: inline-block;
+    margin: 10px;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.icon:hover {
+    transform: scale(1.2);
+}
+
+.tooltip {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px;
+    background-color: #333;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.icon:hover .tooltip {
+    opacity: 1;
+}
+
+.icon a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: #333;
+    text-decoration: none;
+}
+
+.icon i {
+    font-size: 24px;
+}
+
+.facebook {
+    background-color: #3b5998;
+}
+
+.twitter {
+    background-color: #1da1f2;
+}
+
+.instagram {
+    background-color: #c13584;
+}
+
+.github {
+    background-color: #ffffff;
+}
+
+.facebook:hover {
+    background-color: #2d4a86;
+}
+
+.twitter:hover {
+    background-color: #1884d2;
+}
+
+.instagram:hover {
+    background-color: #af2e68;
+}
+
+.github:hover {
+    background-color: #111;
+}
+
+.tooltip::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+}
+
+.planeta {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url("https://github.githubassets.com/images/modules/site/home-campaign/hero-drone.webp");
+    background-size: cover;
+    background-position: center;
+    filter: brightness(80%); /* Diminui a nitidez da imagem */
+  }
